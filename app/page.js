@@ -52,6 +52,9 @@ export default function Home() {
               The practice is dedicated to handling complex legal matters with integrity, ensuring that each client receives focused,
               strategic, and highly professional counsel.
             </p>
+            <Reveal delay={300}>
+              <div className="profile-banner"></div>
+            </Reveal>
           </div>
         </Reveal>
       </section>

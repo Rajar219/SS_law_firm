@@ -347,6 +347,20 @@ a {
   font-style: italic;
 }
 
+.profile-banner {
+  width: 100%;
+  height: 500px;
+  background-image: url('/profile.jpg');
+  background-repeat: no-repeat;
+  /* Desktop: Show the right side (full body). We zoom in so the right 70% fills the container. */
+  background-size: 150% auto;
+  background-position: right 20%;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  margin-top: var(--space-8);
+  border: 1px solid var(--border-dark);
+}
+
 .section-approach {
   background-color: var(--bg-dark);
   text-align: center;
@@ -534,6 +548,13 @@ a {
   .contact-link { font-size: var(--text-lg); word-break: break-word; }
   
   .map-placeholder { min-height: 250px; }
+
+  .profile-banner {
+    height: 400px;
+    /* Mobile: Show the left side (portrait close-up) */
+    background-size: 330% auto;
+    background-position: left 20%;
+  }
 }
 
 @media (max-width: 414px) {
