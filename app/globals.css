@@ -429,15 +429,36 @@ a {
   align-items: center;
 }
 
+/* ANIMATIONS & REVEALS */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
+  from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes expandLine {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
 }
 
 .animate-fade-up {
   opacity: 0;
-  animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+/* Base Reveal Classes */
+.reveal {
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-hidden.type-fade-up { opacity: 0; transform: translateY(20px); }
+.reveal-visible.type-fade-up { opacity: 1; transform: translateY(0); }
+
+.reveal-hidden.type-fade { opacity: 0; }
+.reveal-visible.type-fade { opacity: 1; }
+
+.reveal-hidden.type-line { transform: scaleX(0); transform-origin: left; opacity: 0; }
+.reveal-visible.type-line { transform: scaleX(1); transform-origin: left; opacity: 1; }
 
 .delay-100 { animation-delay: 0.1s; }
 .delay-200 { animation-delay: 0.2s; }
@@ -445,6 +466,22 @@ a {
 .delay-400 { animation-delay: 0.4s; }
 .delay-500 { animation-delay: 0.5s; }
 .delay-600 { animation-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; }
+
+/* REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .reveal-hidden {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
 
 /* RESPONSIVE BREAKPOINTS */
 @media (max-width: 1280px) {

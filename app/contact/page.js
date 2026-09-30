@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import Reveal from '../../components/Reveal';
 import styles from './contact.module.css';
 
 export default function Contact() {
@@ -61,17 +62,20 @@ export default function Contact() {
 
   return (
     <div className={styles.container}>
-      <h2 className="section-heading">Schedule a Consultation</h2>
+      <Reveal delay={100}>
+        <h2 className="section-heading">Schedule a Consultation</h2>
+      </Reveal>
       
       <div className={styles.grid}>
         {/* Contact Information */}
         <div className={styles.contactInfo}>
-          <div className="card-luxury">
-            <h4>Direct Communication</h4>
-            <div className="divider-gold-short"></div>
-            <p style={{ marginBottom: 'var(--space-6)' }}>
-              For urgent matters, please contact the chamber directly via phone or email.
-            </p>
+          <Reveal delay={200}>
+            <div className="card-luxury">
+              <h4>Direct Communication</h4>
+              <div className="divider-gold-short"></div>
+              <p style={{ marginBottom: 'var(--space-6)' }}>
+                For urgent matters, please contact the chamber directly via phone or email.
+              </p>
             
             <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-6)' }}>
               <div>
@@ -88,14 +92,16 @@ export default function Contact() {
                 </a>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
 
         {/* Consultation Form */}
         <div className={styles.formContainer}>
-          <h4 style={{ color: 'var(--white-warm)', marginBottom: 'var(--space-6)', fontSize: 'var(--text-xl)' }}>
-            Consultation Enquiry
-          </h4>
+          <Reveal delay={400}>
+            <h4 style={{ color: 'var(--white-warm)', marginBottom: 'var(--space-6)', fontSize: 'var(--text-xl)' }}>
+              Consultation Enquiry
+            </h4>
+          </Reveal>
 
           {status === 'success' && (
             <div className={`${styles.statusMessage} ${styles.success}`}>
@@ -109,9 +115,10 @@ export default function Contact() {
             </div>
           )}
 
-          <form onSubmit={handleSubmit}>
-            <div className={styles.formGroup}>
-              <label htmlFor="fullName" className={styles.label}>Full Name</label>
+          <Reveal delay={500}>
+            <form onSubmit={handleSubmit}>
+              <div className={styles.formGroup}>
+                <label htmlFor="fullName" className={styles.label}>Full Name</label>
               <input 
                 type="text" 
                 id="fullName" 
@@ -218,6 +225,7 @@ export default function Contact() {
               <strong>Legal Disclaimer:</strong> Submitting an enquiry via this form does not establish an advocate-client relationship. Please do not send confidential or time-sensitive information until formal representation is agreed upon. We do not guarantee specific legal outcomes.
             </div>
           </form>
+          </Reveal>
         </div>
       </div>
     </div>
