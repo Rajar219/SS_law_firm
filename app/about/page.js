@@ -9,7 +9,7 @@ export default function About() {
         </p>
         <div className="divider-gold-short"></div>
         <p style={{ color: 'var(--text-light-muted)', lineHeight: 1.8 }}>
-          [Profile details to be updated based on verified client information. Additional background, professional history, and philosophy will be integrated here upon receipt.]
+          Operating from the Supreme Court of India, SARAVANAN.N provides sophisticated legal representation and advisory services. The practice is dedicated to handling complex legal matters with integrity, ensuring that each client receives focused, strategic, and highly professional counsel.
         </p>
       </div>
     </div>

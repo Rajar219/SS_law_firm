@@ -64,9 +64,6 @@ export default function Home() {
         <div className="container">
           <Reveal delay={100}>
             <h2 className="section-heading" style={{ color: 'var(--bg-dark)' }}>Practice Areas</h2>
-            <p className="section-subheading">
-              [The following categories are placeholders for primary areas of practice. Final categories to be verified by the client.]
-            </p>
           </Reveal>
 
           <div className="grid-3">
@@ -184,11 +181,20 @@ export default function Home() {
 
             <Reveal delay={300}>
               <div className="office-visual">
-                <div className="map-placeholder">
-                  <div className="map-icon" style={{ display: 'flex', justifyContent: 'center', marginBottom: 'var(--space-4)' }}>
-                    <img src="/logo.png" alt="SS Logo" style={{ height: '60px', width: 'auto', objectFit: 'contain', opacity: 0.5 }} />
-                  </div>
-                  <p>Interactive Map Integration Placeholder</p>
+                <div className="map-placeholder" style={{ padding: 0, overflow: 'hidden' }}>
+                  <iframe 
+                    width="100%" 
+                    height="100%" 
+                    frameBorder="0" 
+                    scrolling="no" 
+                    marginHeight="0" 
+                    marginWidth="0" 
+                    src="https://maps.google.com/maps?q=Supreme%20Court%20of%20India,%20New%20Delhi&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    style={{ border: 0, minHeight: '400px', filter: 'grayscale(100%) contrast(120%)' }}
+                    title="Office Location Map"
+                  ></iframe>
+                </div>
+                <div style={{ textAlign: 'center' }}>
                   <Link href="/contact" className="btn-primary" style={{ marginTop: 'var(--space-6)' }}>
                     Request Chamber Appointment
                   </Link>
