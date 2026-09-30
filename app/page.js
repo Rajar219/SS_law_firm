@@ -1,58 +1,59 @@
-import styles from "./page.module.css";
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <div className={styles.logo}>SS</div>
-        <div className={styles.contactInfo}>
-          <a href="mailto:advocatesaravananlaw@gmail.com">advocatesaravananlaw@gmail.com</a>
-          <br />
-          <a href="tel:+916381528329">+91 6381528329</a>
-        </div>
-      </header>
-
-      <main className={styles.main}>
-        <div className={`${styles.heroInitials} ${styles.animateSlideUp}`}>
+    <div>
+      <section style={{
+        minHeight: '80vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+        padding: 'var(--space-12) var(--space-4)',
+        position: 'relative',
+        overflow: 'hidden'
+      }}>
+        {/* Subtle background monogram for texture */}
+        <div style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          fontSize: '40vw',
+          fontFamily: 'var(--font-playfair), serif',
+          color: 'rgba(201, 162, 39, 0.03)',
+          zIndex: 0,
+          pointerEvents: 'none',
+          whiteSpace: 'nowrap'
+        }}>
           SS
         </div>
-        
-        <h1 className={`${styles.heroName} ${styles.animateSlideUp} ${styles['delay-100']}`}>
-          SARAVANAN.N
-        </h1>
-        
-        <h2 className={`${styles.heroDesignation} ${styles.animateSlideUp} ${styles['delay-200']}`}>
-          Advocate, Supreme Court of India
-        </h2>
 
-        <div className={`${styles.detailsGrid} ${styles.animateSlideUp} ${styles['delay-300']}`}>
-          <div className="card-luxury">
-            <h4>Office</h4>
-            <div className="divider-gold-short"></div>
-            <p>
-              Chamber No. 214<br />
-              Block D, Additional Building<br />
-              Supreme Court of India<br />
-              New Delhi – 110001
-            </p>
-          </div>
+        <div style={{ position: 'relative', zIndex: 1, maxWidth: '800px' }}>
+          <h1 style={{ marginBottom: 'var(--space-4)', textTransform: 'uppercase', letterSpacing: '0.15em' }}>
+            SARAVANAN.N
+          </h1>
+          <h2 style={{ color: 'var(--gold-soft)', fontSize: 'var(--text-xl)', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: 'var(--space-8)' }}>
+            Advocate, Supreme Court of India
+          </h2>
           
-          <div className="card-luxury">
-            <h4>Direct Contact</h4>
-            <div className="divider-gold-short"></div>
-            <p style={{ marginBottom: '0.5rem' }}>
-              Mobile: <a href="tel:+916381528329" style={{ color: 'var(--white-warm)' }}>6381528329</a>
-            </p>
-            <p>
-              Email: <a href="mailto:advocatesaravananlaw@gmail.com" style={{ color: 'var(--white-warm)' }}>advocatesaravananlaw@gmail.com</a>
-            </p>
+          <div className="divider-gold-short" style={{ margin: '0 auto var(--space-8)' }}></div>
+          
+          <p style={{ fontSize: 'var(--text-lg)', color: 'var(--text-light-muted)', marginBottom: 'var(--space-12)', lineHeight: 1.8 }}>
+            Dedicated legal representation before the highest courts. A practice built on rigorous analysis, strategic foresight, and an unwavering commitment to the law.
+          </p>
+
+          <div style={{ display: 'flex', gap: 'var(--space-6)', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Link href="/contact" className="btn-primary">
+              Schedule a Consultation
+            </Link>
+            <Link href="/office" className="btn-secondary">
+              Contact Office
+            </Link>
           </div>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <p>&copy; {new Date().getFullYear()} SARAVANAN.N. All rights reserved.</p>
-      </footer>
+      </section>
     </div>
   );
 }
