@@ -9,7 +9,7 @@ export default function Home() {
       <section className="hero-section">
         <div style={{ position: 'absolute', inset: 0, zIndex: 1, backgroundColor: 'var(--bg-dark)' }}>
           <Image 
-            src="/hero-sketch.jpg" 
+            src="/hero-sketch-compressed.jpg" 
             alt="Supreme Court Architecture Sketch"
             fill
             priority
@@ -22,7 +22,7 @@ export default function Home() {
 
         <div className="hero-content">
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 'var(--space-8)' }}>
-            <Image src="/logo_transparent.png" alt="SS Logo" width={140} height={140} priority style={{ height: '140px', width: 'auto', objectFit: 'contain' }} />
+            <Image src="/logo_transparent.png" alt="SS Logo" width={140} height={140} priority style={{ objectFit: 'contain' }} />
           </div>
 
           <h1 className="hero-title">

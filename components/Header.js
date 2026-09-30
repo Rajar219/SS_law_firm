@@ -41,7 +41,7 @@ export default function Header() {
           
           {/* Logo */}
           <Link href="/" className="logo">
-            <Image src="/logo_transparent.png" alt="SS Law Firm Logo" width={100} height={70} priority style={{ height: '70px', width: 'auto', objectFit: 'contain' }} />
+            <Image src="/logo_transparent.png" alt="SS Law Firm Logo" width={100} height={70} priority style={{ objectFit: 'contain' }} />
           </Link>
 
           {/* Desktop Navigation */}
