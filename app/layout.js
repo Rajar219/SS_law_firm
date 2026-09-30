@@ -14,13 +14,68 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "SARAVANAN.N | Advocate, Supreme Court of India",
-  description: "Law Chambers of SARAVANAN.N, Advocate, Supreme Court of India. Chamber No. 214, Block D, Additional Building.",
+  metadataBase: new URL('https://sslawfirm-placeholder.com'), // Replace with actual domain when deployed
+  title: {
+    default: "SARAVANAN.N | Advocate, Supreme Court of India",
+    template: "%s | SARAVANAN.N"
+  },
+  description: "Providing legal representation and advisory services. Chamber No. 214, Block D, Additional Building, Supreme Court of India, New Delhi.",
+  keywords: ["Advocate", "Supreme Court of India", "New Delhi Law Chamber", "Legal Representation", "Legal Advisory", "SARAVANAN.N"],
+  authors: [{ name: "SARAVANAN.N" }],
+  creator: "SARAVANAN.N",
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "/",
+    title: "SARAVANAN.N | Advocate, Supreme Court of India",
+    description: "Providing legal representation and advisory services. Chamber No. 214, Block D, Additional Building, Supreme Court of India, New Delhi.",
+    siteName: "SARAVANAN.N, Advocate",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SARAVANAN.N | Advocate, Supreme Court of India",
+    description: "Providing legal representation and advisory services. Chamber No. 214, Block D, Additional Building, Supreme Court of India, New Delhi.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'LegalService',
+    name: 'SARAVANAN.N | Advocate, Supreme Court of India',
+    description: 'Providing legal representation and advisory services.',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Chamber No. 214, Block D, Additional Building, Supreme Court of India',
+      addressLocality: 'New Delhi',
+      addressRegion: 'Delhi',
+      postalCode: '110001',
+      addressCountry: 'IN'
+    },
+    telephone: '+916381528329',
+    email: 'advocatesaravananlaw@gmail.com',
+    url: 'https://sslawfirm-placeholder.com'
+  };
+
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body>
         <Header />
         <main style={{ flex: 1 }}>{children}</main>
