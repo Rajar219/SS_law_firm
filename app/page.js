@@ -10,7 +10,7 @@ export default function Home() {
 
         <div className="hero-content">
           <div className="animate-fade-up delay-100" style={{ display: 'flex', justifyContent: 'center', marginBottom: 'var(--space-8)' }}>
-            <img src="/logo.png" alt="SS Logo" style={{ height: '140px', width: 'auto', objectFit: 'contain', mixBlendMode: 'screen' }} />
+            <img src="/logo_transparent.png" alt="SS Logo" style={{ height: '140px', width: 'auto', objectFit: 'contain' }} />
           </div>
 
           <h1 className="hero-title animate-fade-up delay-200">
