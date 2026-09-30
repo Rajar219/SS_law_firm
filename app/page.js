@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Reveal from '../components/Reveal';
 
 export default function Home() {
@@ -6,29 +7,40 @@ export default function Home() {
     <>
       {/* 1. HERO SECTION */}
       <section className="hero-section">
-        <div className="hero-bg-pattern"></div>
+        <div style={{ position: 'absolute', inset: 0, zIndex: 1, backgroundColor: 'var(--bg-dark)' }}>
+          <Image 
+            src="/hero-sketch.jpg" 
+            alt="Supreme Court Architecture Sketch"
+            fill
+            priority
+            sizes="100vw"
+            quality={85}
+            style={{ objectFit: 'cover', objectPosition: 'center 20%', opacity: 0.6 }}
+          />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(8, 9, 11, 0.6), rgba(8, 9, 11, 1))' }}></div>
+        </div>
 
         <div className="hero-content">
-          <div className="animate-fade-up delay-100" style={{ display: 'flex', justifyContent: 'center', marginBottom: 'var(--space-8)' }}>
-            <img src="/logo_transparent.png" alt="SS Logo" style={{ height: '140px', width: 'auto', objectFit: 'contain' }} />
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 'var(--space-8)' }}>
+            <Image src="/logo_transparent.png" alt="SS Logo" width={140} height={140} priority style={{ height: '140px', width: 'auto', objectFit: 'contain' }} />
           </div>
 
-          <h1 className="hero-title animate-fade-up delay-200">
+          <h1 className="hero-title">
             SARAVANAN.N
           </h1>
 
-          <h2 className="hero-subtitle animate-fade-up delay-300">
+          <h2 className="hero-subtitle">
             Advocate, Supreme Court of India
           </h2>
 
-          <div className="divider-gold-short animate-fade-up delay-400" style={{ margin: '0 auto var(--space-8)' }}></div>
+          <div className="divider-gold-short" style={{ margin: '0 auto var(--space-8)' }}></div>
 
-          <p className="hero-copy animate-fade-up delay-500">
+          <p className="hero-copy">
             Providing premium legal counsel and dedicated representation before the highest courts.
             A practice built on rigorous analysis, strategic foresight, and an unwavering commitment to justice.
           </p>
 
-          <div className="hero-ctas animate-fade-up delay-600">
+          <div className="hero-ctas">
             <a href="https://wa.me/916381528329?text=Hello%20Mr.%20Saravanan%2C%20I%20would%20like%20to%20schedule%20a%20legal%20consultation.%20I%20would%20like%20to%20discuss%20my%20legal%20matter%20with%20you." target="_blank" rel="noopener noreferrer" className="btn-primary">
               Get Consultation
             </a>
