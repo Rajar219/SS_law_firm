@@ -8,13 +8,14 @@ export default function Footer() {
       borderTop: '1px solid var(--border-dark)',
       padding: 'var(--space-12) var(--space-8)',
       backgroundColor: 'var(--bg-secondary)',
-      marginTop: 'auto'
+      marginTop: 'auto',
+      overflow: 'hidden'
     }}>
       <div style={{
         maxWidth: '1200px',
         margin: '0 auto',
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
         gap: 'var(--space-8)',
         color: 'var(--text-light-muted)'
       }}>
@@ -33,7 +34,7 @@ export default function Footer() {
           <h4 style={{ color: 'var(--gold-soft)', marginBottom: 'var(--space-4)', letterSpacing: '0.1em', fontSize: 'var(--text-sm)', textTransform: 'uppercase', fontFamily: 'var(--font-inter)' }}>Contact</h4>
           <p style={{ fontSize: 'var(--text-sm)', lineHeight: 1.8 }}>
             <a href="tel:+916381528329" style={{ display: 'block', marginBottom: '0.5rem' }}>+91 6381528329</a>
-            <a href="mailto:advocatesaravananlaw@gmail.com" style={{ display: 'block' }}>advocatesaravananlaw@gmail.com</a>
+            <a href="mailto:advocatesaravananlaw@gmail.com" style={{ display: 'block', wordBreak: 'break-word' }}>advocatesaravananlaw@gmail.com</a>
           </p>
         </div>
 
@@ -49,15 +50,16 @@ export default function Footer() {
       
       <div style={{
         maxWidth: '1200px',
-        margin: 'var(--space-12) auto 0',
+        margin: 'var(--space-8) auto 0',
         paddingTop: 'var(--space-6)',
         borderTop: '1px solid var(--border-dark)',
         textAlign: 'center',
         fontSize: 'var(--text-xs)',
         textTransform: 'uppercase',
-        letterSpacing: '0.05em'
+        letterSpacing: '0.05em',
+        lineHeight: 1.6
       }}>
-        &copy; {year} SARAVANAN.N, Advocate, Supreme Court of India. All rights reserved.
+        &copy; {year} SARAVANAN.N, Advocate, Supreme Court of India.<br />All rights reserved.
       </div>
     </footer>
   );

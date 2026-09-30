@@ -207,7 +207,7 @@ export default function Header() {
           top: 0;
           right: -100%;
           width: 100%;
-          height: 100vh;
+          height: 100dvh;
           background-color: var(--bg-secondary);
           z-index: 99;
           transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1);
