@@ -7,22 +7,22 @@ export default function Home() {
       <section className="hero-section">
         <div className="hero-bg-pattern"></div>
         <div className="hero-watermark">SS</div>
-        
+
         <div className="hero-content">
           <div className="hero-logo-small animate-fade-up delay-100">SS</div>
-          
+
           <h1 className="hero-title animate-fade-up delay-200">
             SARAVANAN.N
           </h1>
-          
+
           <h2 className="hero-subtitle animate-fade-up delay-300">
             Advocate, Supreme Court of India
           </h2>
-          
+
           <div className="divider-gold-short animate-fade-up delay-400" style={{ margin: '0 auto var(--space-8)' }}></div>
-          
+
           <p className="hero-copy animate-fade-up delay-500">
-            Providing premium legal counsel and dedicated representation before the highest courts. 
+            Providing premium legal counsel and dedicated representation before the highest courts.
             A practice built on rigorous analysis, strategic foresight, and an unwavering commitment to justice.
           </p>
 
@@ -42,8 +42,8 @@ export default function Home() {
         <div className="container">
           <h2 className="section-heading">The Chamber</h2>
           <p className="intro-text">
-            Operating from the Supreme Court of India, SARAVANAN.N provides sophisticated legal representation and advisory services. 
-            The practice is dedicated to handling complex legal matters with integrity, ensuring that each client receives focused, 
+            Operating from the Supreme Court of India, SARAVANAN.N provides sophisticated legal representation and advisory services.
+            The practice is dedicated to handling complex legal matters with integrity, ensuring that each client receives focused,
             strategic, and highly professional counsel.
           </p>
         </div>
@@ -56,7 +56,7 @@ export default function Home() {
           <p className="section-subheading">
             [The following categories are placeholders for primary areas of practice. Final categories to be verified by the client.]
           </p>
-          
+
           <div className="grid-3">
             {[
               { title: "Constitutional Law", desc: "Representation in writ petitions, fundamental rights enforcement, and constitutional challenges before the Apex Court." },
@@ -106,7 +106,7 @@ export default function Home() {
               <h4 style={{ color: 'var(--bg-dark)' }}>Dispute Resolution</h4>
               <div className="divider-gold-short" style={{ margin: 'var(--space-4) 0' }}></div>
               <p style={{ color: 'var(--text-muted)' }}>
-                Comprehensive handling of civil, commercial, and constitutional disputes. 
+                Comprehensive handling of civil, commercial, and constitutional disputes.
                 Our approach emphasizes thorough case preparation, strategic filing, and robust representation throughout the judicial process.
               </p>
             </div>
@@ -114,7 +114,7 @@ export default function Home() {
               <h4 style={{ color: 'var(--bg-dark)' }}>Advisory & Strategy</h4>
               <div className="divider-gold-short" style={{ margin: 'var(--space-4) 0' }}></div>
               <p style={{ color: 'var(--text-muted)' }}>
-                Providing preemptive legal risk analysis and compliance counseling. 
+                Providing preemptive legal risk analysis and compliance counseling.
                 We assist individuals and organizations in structuring their affairs to align strictly with prevailing statutory and constitutional mandates.
               </p>
             </div>
@@ -126,7 +126,7 @@ export default function Home() {
       <section className="section-office">
         <div className="container">
           <div className="grid-2 align-center">
-            
+
             <div className="office-details">
               <h2 className="section-heading" style={{ textAlign: 'left' }}>Office Chamber</h2>
               <div className="card-luxury">
@@ -138,7 +138,7 @@ export default function Home() {
                   Supreme Court of India<br />
                   New Delhi – 110001
                 </p>
-                
+
                 <div className="contact-methods" style={{ marginTop: 'var(--space-8)' }}>
                   <div style={{ marginBottom: 'var(--space-4)' }}>
                     <span className="contact-label">Direct Mobile</span>
