@@ -7,9 +7,6 @@ export default function Home() {
       {/* 1. HERO SECTION */}
       <section className="hero-section">
         <div className="hero-bg-pattern"></div>
-        <div className="hero-watermark" style={{ display: 'flex', justifyContent: 'center', opacity: 0.03 }}>
-          <img src="/logo.png" alt="" style={{ height: '80vh', width: 'auto', objectFit: 'contain' }} />
-        </div>
 
         <div className="hero-content">
           <div className="animate-fade-up delay-100" style={{ display: 'flex', justifyContent: 'center', marginBottom: 'var(--space-8)' }}>
@@ -32,9 +29,9 @@ export default function Home() {
           </p>
 
           <div className="hero-ctas animate-fade-up delay-600">
-            <Link href="/contact" className="btn-primary">
-              Schedule a Consultation
-            </Link>
+            <a href="https://wa.me/916381528329?text=Hello%20Mr.%20Saravanan%2C%20I%20would%20like%20to%20schedule%20a%20legal%20consultation.%20I%20would%20like%20to%20discuss%20my%20legal%20matter%20with%20you." target="_blank" rel="noopener noreferrer" className="btn-primary">
+              Get Consultation
+            </a>
             <Link href="/practice-areas" className="btn-secondary">
               View Practice Areas
             </Link>
@@ -195,9 +192,9 @@ export default function Home() {
                   ></iframe>
                 </div>
                 <div style={{ textAlign: 'center' }}>
-                  <Link href="/contact" className="btn-primary" style={{ marginTop: 'var(--space-6)' }}>
+                  <a href="https://wa.me/916381528329?text=Hello%20Mr.%20Saravanan%2C%20I%20would%20like%20to%20schedule%20a%20legal%20consultation.%20I%20would%20like%20to%20discuss%20my%20legal%20matter%20with%20you." target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ marginTop: 'var(--space-6)' }}>
                     Request Chamber Appointment
-                  </Link>
+                  </a>
                 </div>
               </div>
             </Reveal>

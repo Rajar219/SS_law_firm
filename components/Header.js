@@ -58,9 +58,9 @@ export default function Header() {
 
           {/* CTA & Mobile Toggle */}
           <div className="header-actions">
-            <Link href="/contact" className="btn-primary desktop-cta">
+            <a href="https://wa.me/916381528329?text=Hello%20Mr.%20Saravanan%2C%20I%20would%20like%20to%20schedule%20a%20legal%20consultation.%20I%20would%20like%20to%20discuss%20my%20legal%20matter%20with%20you." target="_blank" rel="noopener noreferrer" className="btn-primary desktop-cta">
               Consultation
-            </Link>
+            </a>
             
             <button 
               className={`mobile-toggle ${mobileMenuOpen ? 'open' : ''}`}
@@ -89,9 +89,9 @@ export default function Header() {
                 {link.name}
               </Link>
             ))}
-            <Link href="/contact" className="mobile-nav-link" style={{ color: 'var(--gold-primary)' }}>
-              Schedule Consultation
-            </Link>
+            <a href="https://wa.me/916381528329?text=Hello%20Mr.%20Saravanan%2C%20I%20would%20like%20to%20schedule%20a%20legal%20consultation.%20I%20would%20like%20to%20discuss%20my%20legal%20matter%20with%20you." target="_blank" rel="noopener noreferrer" className="mobile-nav-link" style={{ color: 'var(--gold-primary)' }}>
+              Consultation
+            </a>
           </nav>
         </div>
       </div>
