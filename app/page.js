@@ -7,10 +7,14 @@ export default function Home() {
       {/* 1. HERO SECTION */}
       <section className="hero-section">
         <div className="hero-bg-pattern"></div>
-        <div className="hero-watermark">SS</div>
+        <div className="hero-watermark" style={{ display: 'flex', justifyContent: 'center', opacity: 0.03 }}>
+          <img src="/logo.png" alt="" style={{ height: '80vh', width: 'auto', objectFit: 'contain' }} />
+        </div>
 
         <div className="hero-content">
-          <div className="hero-logo-small animate-fade-up delay-100">SS</div>
+          <div className="animate-fade-up delay-100" style={{ display: 'flex', justifyContent: 'center', marginBottom: 'var(--space-8)' }}>
+            <img src="/logo.png" alt="SS Logo" style={{ height: '140px', width: 'auto', objectFit: 'contain' }} />
+          </div>
 
           <h1 className="hero-title animate-fade-up delay-200">
             SARAVANAN.N
@@ -178,7 +182,9 @@ export default function Home() {
             <Reveal delay={300}>
               <div className="office-visual">
                 <div className="map-placeholder">
-                  <div className="map-icon">SS</div>
+                  <div className="map-icon" style={{ display: 'flex', justifyContent: 'center', marginBottom: 'var(--space-4)' }}>
+                    <img src="/logo.png" alt="SS Logo" style={{ height: '60px', width: 'auto', objectFit: 'contain', opacity: 0.5 }} />
+                  </div>
                   <p>Interactive Map Integration Placeholder</p>
                   <Link href="/contact" className="btn-primary" style={{ marginTop: 'var(--space-6)' }}>
                     Request Chamber Appointment
