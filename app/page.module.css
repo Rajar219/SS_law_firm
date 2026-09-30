@@ -5,25 +5,31 @@
 }
 
 .header {
-  padding: 2rem 4rem;
+  padding: var(--space-8) var(--space-12);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-dark);
 }
 
 .logo {
   font-family: var(--font-playfair), serif;
-  font-size: 1.5rem;
-  letter-spacing: 0.1em;
+  font-size: var(--text-2xl);
+  letter-spacing: 0.05em;
   font-weight: 600;
+  color: var(--white-warm);
 }
 
 .contactInfo {
-  font-size: 0.9rem;
-  opacity: 0.8;
+  font-size: var(--text-sm);
+  color: var(--text-light-muted);
   text-align: right;
-  line-height: 1.5;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.contactInfo a:hover {
+  color: var(--gold-soft);
 }
 
 .main {
@@ -33,95 +39,96 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 4rem 2rem;
+  padding: var(--space-24) var(--space-8);
 }
 
 .heroInitials {
   font-family: var(--font-playfair), serif;
-  font-size: 6rem;
+  font-size: var(--text-6xl);
   line-height: 1;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-4);
+  color: var(--gold-primary);
   opacity: 0;
 }
 
 .heroName {
-  font-size: 2.5rem;
-  letter-spacing: 0.15em;
-  margin-bottom: 1rem;
+  font-size: var(--text-5xl);
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-2);
   text-transform: uppercase;
+  color: var(--white-warm);
   opacity: 0;
 }
 
 .heroDesignation {
-  font-size: 1.1rem;
-  letter-spacing: 0.2em;
+  font-size: var(--text-lg);
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--gold-primary);
+  color: var(--gold-soft);
   opacity: 0;
-  margin-bottom: 4rem;
+  margin-bottom: var(--space-12);
+  font-weight: 300;
 }
 
 .detailsGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: var(--space-12);
   max-width: 900px;
   width: 100%;
   margin: 0 auto;
-  text-align: left;
   opacity: 0;
-  padding-top: 3rem;
-  border-top: 1px solid var(--border-light);
-}
-
-.detailsColumn h3 {
-  color: var(--gold-primary);
-  font-size: 0.8rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-  font-family: var(--font-inter), sans-serif;
-}
-
-.detailsColumn p, .detailsColumn a {
-  font-size: 1rem;
-  line-height: 1.8;
-  margin-bottom: 0.5rem;
-  display: block;
+  padding-top: var(--space-12);
+  border-top: 1px solid var(--border-dark);
 }
 
 .footer {
-  padding: 2rem;
+  padding: var(--space-8);
   text-align: center;
-  font-size: 0.8rem;
-  opacity: 0.5;
-  border-top: 1px solid var(--border-light);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-dark);
   margin-top: auto;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
+
+/* Specific Animations for Page */
+@keyframes slideUpFade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animateSlideUp {
+  animation: slideUpFade 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-100 { animation-delay: 0.2s; }
+.delay-200 { animation-delay: 0.4s; }
+.delay-300 { animation-delay: 0.6s; }
 
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
-    gap: 1.5rem;
-    padding: 2rem;
+    gap: var(--space-6);
+    padding: var(--space-8) var(--space-4);
     text-align: center;
   }
   .contactInfo {
     text-align: center;
   }
   .heroInitials {
-    font-size: 4rem;
+    font-size: var(--text-5xl);
   }
   .heroName {
-    font-size: 1.8rem;
+    font-size: var(--text-3xl);
   }
   .heroDesignation {
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-size: var(--text-sm);
+    line-height: 1.6;
   }
   .detailsGrid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
-    text-align: center;
+    gap: var(--space-8);
   }
 }

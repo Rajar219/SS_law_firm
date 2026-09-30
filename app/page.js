@@ -13,21 +13,22 @@ export default function Home() {
       </header>
 
       <main className={styles.main}>
-        <div className={`${styles.heroInitials} gold-text animate-fade-in`}>
+        <div className={`${styles.heroInitials} ${styles.animateSlideUp}`}>
           SS
         </div>
         
-        <h1 className={`${styles.heroName} animate-fade-in delay-100`}>
+        <h1 className={`${styles.heroName} ${styles.animateSlideUp} ${styles['delay-100']}`}>
           SARAVANAN.N
         </h1>
         
-        <h2 className={`${styles.heroDesignation} animate-fade-in delay-200`}>
+        <h2 className={`${styles.heroDesignation} ${styles.animateSlideUp} ${styles['delay-200']}`}>
           Advocate, Supreme Court of India
         </h2>
 
-        <div className={`${styles.detailsGrid} animate-fade-in delay-300`}>
-          <div className={styles.detailsColumn}>
-            <h3>Office</h3>
+        <div className={`${styles.detailsGrid} ${styles.animateSlideUp} ${styles['delay-300']}`}>
+          <div className="card-luxury">
+            <h4>Office</h4>
+            <div className="divider-gold-short"></div>
             <p>
               Chamber No. 214<br />
               Block D, Additional Building<br />
@@ -35,10 +36,16 @@ export default function Home() {
               New Delhi – 110001
             </p>
           </div>
-          <div className={styles.detailsColumn}>
-            <h3>Direct Contact</h3>
-            <a href="tel:+916381528329">Mobile: 6381528329</a>
-            <a href="mailto:advocatesaravananlaw@gmail.com">advocatesaravananlaw@gmail.com</a>
+          
+          <div className="card-luxury">
+            <h4>Direct Contact</h4>
+            <div className="divider-gold-short"></div>
+            <p style={{ marginBottom: '0.5rem' }}>
+              Mobile: <a href="tel:+916381528329" style={{ color: 'var(--white-warm)' }}>6381528329</a>
+            </p>
+            <p>
+              Email: <a href="mailto:advocatesaravananlaw@gmail.com" style={{ color: 'var(--white-warm)' }}>advocatesaravananlaw@gmail.com</a>
+            </p>
           </div>
         </div>
       </main>

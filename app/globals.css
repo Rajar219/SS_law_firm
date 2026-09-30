@@ -1,31 +1,68 @@
 :root {
-  --background: #0a0a0a;
-  --foreground: #f8f8ff;
+  /* COLOR PALETTE */
+  --bg-dark: #08090B;
+  --bg-secondary: #111318;
+  --gold-primary: #C9A227;
+  --gold-soft: #E2C76B;
+  --ivory: #F5F1E8;
+  --white-warm: #FFFDF8;
   
-  --gold-primary: #d4af37;
-  --gold-muted: #aa8b2b;
-  --gold-gradient: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fdbf59);
+  --text-dark: #171717;
+  --text-muted: #6E6A61;
+  --text-light: #F5F1E8;
+  --text-light-muted: rgba(245, 241, 232, 0.7);
+
+  --border-dark: rgba(201, 162, 39, 0.2);
+  --border-light: rgba(201, 162, 39, 0.4);
+
+  /* TYPOGRAPHY SCALE */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+
+  /* SPACING SYSTEM */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* BORDERS & SHADOWS */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px; /* Avoid overly rounded corners */
   
-  --border-light: rgba(255, 255, 255, 0.1);
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.4);
+  --shadow-md: 0 4px 8px rgba(0,0,0,0.5);
+  --shadow-gold: 0 4px 12px rgba(201, 162, 39, 0.15);
 }
 
 html {
   height: 100%;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: var(--font-inter), sans-serif;
+  font-size: var(--text-base);
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -36,39 +73,176 @@ body {
   margin: 0;
 }
 
+/* TYPOGRAPHY */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-playfair), serif;
   font-weight: 400;
+  line-height: 1.2;
+  color: var(--text-light);
 }
+
+h1 { font-size: var(--text-5xl); letter-spacing: -0.02em; }
+h2 { font-size: var(--text-4xl); letter-spacing: -0.01em; }
+h3 { font-size: var(--text-3xl); }
+h4 { font-size: var(--text-2xl); }
+h5 { font-size: var(--text-xl); }
 
 a {
   color: inherit;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.3s ease;
 }
 
-a:hover {
+/* COMPONENT STYLES */
+
+/* Section Headings */
+.section-heading {
+  font-size: var(--text-3xl);
+  color: var(--gold-primary);
+  margin-bottom: var(--space-8);
+  text-align: center;
+  position: relative;
+  padding-bottom: var(--space-4);
+}
+
+.section-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 1px;
+  background-color: var(--gold-primary);
+}
+
+/* Gold Divider */
+.divider-gold {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-dark);
+  margin: var(--space-8) 0;
+}
+
+.divider-gold-short {
+  width: 80px;
+  height: 1px;
+  background-color: var(--gold-primary);
+  margin: var(--space-6) 0;
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3) var(--space-8);
+  background-color: var(--gold-primary);
+  color: var(--bg-dark);
+  font-family: var(--font-inter), sans-serif;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--gold-primary);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
   color: var(--gold-primary);
 }
 
-.gold-text {
-  background: var(--gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent; /* Fallback */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3) var(--space-8);
+  background-color: transparent;
+  color: var(--gold-primary);
+  font-family: var(--font-inter), sans-serif;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+.btn-secondary:hover {
+  border-color: var(--gold-primary);
+  background-color: rgba(201, 162, 39, 0.05);
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.8s ease-out forwards;
+/* Cards (e.g. for contact, practice areas) */
+.card-luxury {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-dark);
+  padding: var(--space-8);
+  border-radius: var(--radius-md);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
+.card-luxury:hover {
+  border-color: var(--border-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+.card-luxury h4 {
+  color: var(--gold-primary);
+  margin-bottom: var(--space-4);
+}
+
+.card-luxury p {
+  color: var(--text-light-muted);
+  font-size: var(--text-sm);
+}
+
+/* Light theme inversions (for Ivory background sections) */
+.section-ivory {
+  background-color: var(--ivory);
+  color: var(--text-dark);
+}
+
+.section-ivory h1, 
+.section-ivory h2, 
+.section-ivory h3, 
+.section-ivory h4 {
+  color: var(--bg-dark);
+}
+
+.section-ivory p {
+  color: var(--text-muted);
+}
+
+.section-ivory .btn-primary {
+  background-color: var(--bg-dark);
+  color: var(--ivory);
+  border-color: var(--bg-dark);
+}
+
+.section-ivory .btn-primary:hover {
+  background-color: transparent;
+  color: var(--bg-dark);
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 1024px) {
+  h1 { font-size: var(--text-4xl); }
+  h2 { font-size: var(--text-3xl); }
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: var(--text-3xl); }
+  h2 { font-size: var(--text-2xl); }
+  
+  .section-heading {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-6);
+  }
+}
