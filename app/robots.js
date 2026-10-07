@@ -5,6 +5,6 @@ export default function robots() {
       allow: '/',
       disallow: ['/private/'],
     },
-    sitemap: 'https://sslawfirm-placeholder.com/sitemap.xml',
+    sitemap: 'https://saravananadv.world/sitemap.xml',
   }
 }

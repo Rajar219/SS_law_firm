@@ -1,3 +1,9 @@
+export const metadata = {
+  title: 'Office Chamber',
+  description: 'Office Chamber of SARAVANAN.N, Advocate. Located at Chamber No. 214, Block D, Additional Building, Supreme Court of India, New Delhi – 110001.',
+  alternates: { canonical: '/office' },
+};
+
 export default function Office() {
   return (
     <div style={{ padding: 'var(--space-16) var(--space-8)', maxWidth: '800px', margin: '0 auto' }}>

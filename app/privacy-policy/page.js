@@ -1,3 +1,9 @@
+export const metadata = {
+  title: 'Privacy Policy',
+  description: 'Privacy Policy and Data Protection guidelines for the legal practice of SARAVANAN.N, Advocate, Supreme Court of India.',
+  alternates: { canonical: '/privacy-policy' },
+};
+
 export default function PrivacyPolicy() {
   return (
     <div style={{ padding: 'var(--space-16) var(--space-8)', maxWidth: '800px', margin: '0 auto' }}>

@@ -1,3 +1,9 @@
+export const metadata = {
+  title: 'Practice Areas',
+  description: 'Practice areas of SARAVANAN.N including Constitutional Law, Appellate Practice, Civil Litigation, Criminal Defense, Commercial Disputes, and Administrative Law.',
+  alternates: { canonical: '/practice-areas' },
+};
+
 export default function PracticeAreas() {
   const areas = [
     "Constitutional Law",

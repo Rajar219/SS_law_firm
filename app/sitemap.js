@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://sslawfirm-placeholder.com'; // Replace with actual domain when deployed
+  const baseUrl = 'https://saravananadv.world';
   const lastModified = new Date();
 
   return [

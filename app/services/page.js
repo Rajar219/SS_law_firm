@@ -1,3 +1,9 @@
+export const metadata = {
+  title: 'Legal Services',
+  description: 'Comprehensive legal services including Dispute Resolution, Advisory & Strategy provided by SARAVANAN.N at the Supreme Court of India.',
+  alternates: { canonical: '/services' },
+};
+
 export default function Services() {
   return (
     <div style={{ padding: 'var(--space-16) var(--space-8)', maxWidth: '800px', margin: '0 auto' }}>

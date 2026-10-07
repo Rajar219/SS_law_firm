@@ -30,6 +30,14 @@ export const metadata = {
     title: "SARAVANAN.N | Advocate, Supreme Court of India",
     description: "Providing legal representation and advisory services. Chamber No. 214, Block D, Additional Building, Supreme Court of India, New Delhi.",
     siteName: "SARAVANAN.N, Advocate",
+    images: [
+      {
+        url: '/hero-sketch-compressed.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'SARAVANAN.N, Advocate, Supreme Court of India',
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",

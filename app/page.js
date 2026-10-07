@@ -2,6 +2,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Reveal from '../components/Reveal';
 
+export const metadata = {
+  title: 'Home | SARAVANAN.N, Advocate Supreme Court of India',
+  description: 'Premium legal counsel and dedicated representation before the Supreme Court of India in New Delhi. Providing strategic foresight and commitment to justice.',
+  alternates: { canonical: '/' },
+};
+
 export default function Home() {
   return (
     <>

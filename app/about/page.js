@@ -1,3 +1,9 @@
+export const metadata = {
+  title: 'Advocate Profile',
+  description: 'Profile of SARAVANAN.N, Advocate at the Supreme Court of India. Providing sophisticated legal representation and advisory services with integrity.',
+  alternates: { canonical: '/about' },
+};
+
 export default function About() {
   return (
     <div style={{ padding: 'var(--space-16) var(--space-8)', maxWidth: '800px', margin: '0 auto' }}>

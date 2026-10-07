@@ -1,3 +1,9 @@
+export const metadata = {
+  title: 'Terms & Disclaimer',
+  description: 'Legal Disclaimer and Terms of Use for the website of SARAVANAN.N, Advocate, Supreme Court of India.',
+  alternates: { canonical: '/terms' },
+};
+
 export default function Terms() {
   return (
     <div style={{ padding: 'var(--space-16) var(--space-8)', maxWidth: '800px', margin: '0 auto' }}>
