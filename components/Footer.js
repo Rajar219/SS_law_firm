@@ -60,8 +60,8 @@ export default function Footer() {
         lineHeight: 1.6
       }}>
         &copy; {year} SARAVANAN.N, Advocate, Supreme Court of India.<br />All rights reserved.<br />
-        <span style={{ display: 'inline-block', marginTop: '0.5rem' }}>
-          Designed by <a href="https://www.wisdotech.in" target="_blank" rel="noopener noreferrer" aria-label="Visit WISDO TECH website in a new tab" style={{ color: 'inherit', textDecoration: 'none' }}>WISDO TECH</a>
+        <span style={{ display: 'inline-block', marginTop: '0.75rem', fontSize: '0.9em', opacity: 0.85 }}>
+          Designed by <a href="https://www.wisdotech.in" target="_blank" rel="noopener noreferrer" aria-label="Visit WISDO TECH website in a new tab" style={{ color: 'var(--gold-soft)', textDecoration: 'none', fontWeight: 600, letterSpacing: '0.1em', borderBottom: '1px solid var(--gold-soft)' }}>WISDO TECH</a>
         </span>
       </div>
     </footer>
