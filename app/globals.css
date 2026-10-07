@@ -722,3 +722,7 @@ a {
         @media (max-width: 768px) {
           .header-container { padding: 0 var(--space-4); }
         }
+        @media (max-width: 768px) {
+          .footer-credit { font-size: 0.75em; }
+        }
+        .footer-credit { font-size: 0.9em; }
