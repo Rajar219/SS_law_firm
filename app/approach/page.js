@@ -6,7 +6,7 @@ export default function Approach() {
         <h4>Strategic & Rigorous</h4>
         <div className="divider-gold-short" style={{ margin: 'var(--space-4) 0' }}></div>
         <p>
-          [Content detailing the chamber's approach to complex litigation, client confidentiality, and strategic legal counsel to be updated.]
+          [Content detailing the chamber&apos;s approach to complex litigation, client confidentiality, and strategic legal counsel to be updated.]
         </p>
       </div>
     </div>

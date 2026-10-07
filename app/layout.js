@@ -14,7 +14,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://sslawfirm-placeholder.com'), // Replace with actual domain when deployed
+  metadataBase: new URL('https://saravananadv.world'),
   title: {
     default: "SARAVANAN.N | Advocate, Supreme Court of India",
     template: "%s | SARAVANAN.N"
@@ -65,7 +65,7 @@ export default function RootLayout({ children }) {
     },
     telephone: '+916381528329',
     email: 'advocatesaravananlaw@gmail.com',
-    url: 'https://sslawfirm-placeholder.com'
+    url: 'https://saravananadv.world'
   };
 
   return (

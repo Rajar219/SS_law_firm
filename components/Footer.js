@@ -59,7 +59,10 @@ export default function Footer() {
         letterSpacing: '0.05em',
         lineHeight: 1.6
       }}>
-        &copy; {year} SARAVANAN.N, Advocate, Supreme Court of India.<br />All rights reserved.
+        &copy; {year} SARAVANAN.N, Advocate, Supreme Court of India.<br />All rights reserved.<br />
+        <span style={{ display: 'inline-block', marginTop: '0.5rem' }}>
+          Designed by <a href="https://www.wisdotech.in" target="_blank" rel="noopener noreferrer" aria-label="Visit WISDO TECH website in a new tab" style={{ color: 'inherit', textDecoration: 'none' }}>WISDO TECH</a>
+        </span>
       </div>
     </footer>
   );

@@ -8,8 +8,8 @@ export default function Home() {
       {/* 1. HERO SECTION */}
       <section className="hero-section">
         <div style={{ position: 'absolute', inset: 0, zIndex: 1, backgroundColor: 'var(--bg-dark)' }}>
-          <Image 
-            src="/hero-sketch-compressed.jpg" 
+          <Image
+            src="/hero-sketch-compressed.jpg"
             alt="Supreme Court Architecture Sketch"
             fill
             priority
@@ -191,13 +191,13 @@ export default function Home() {
             <Reveal delay={300}>
               <div className="office-visual">
                 <div className="map-placeholder" style={{ padding: 0, overflow: 'hidden' }}>
-                  <iframe 
-                    width="100%" 
-                    height="100%" 
-                    frameBorder="0" 
-                    scrolling="no" 
-                    marginHeight="0" 
-                    marginWidth="0" 
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    frameBorder="0"
+                    scrolling="no"
+                    marginHeight="0"
+                    marginWidth="0"
                     src="https://maps.google.com/maps?q=Supreme%20Court%20of%20India,%20New%20Delhi&t=&z=15&ie=UTF8&iwloc=&output=embed"
                     style={{ border: 0, minHeight: '400px', filter: 'grayscale(100%) contrast(120%)' }}
                     title="Office Location Map"

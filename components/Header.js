@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -23,6 +24,7 @@ export default function Header() {
   }, []);
 
   // Close mobile menu on route change
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [pathname]);
